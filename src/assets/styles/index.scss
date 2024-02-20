@@ -23,31 +23,7 @@ html,
 body {
 	scroll-behavior: smooth;
 }
-input[type='range']:hover::-webkit-slider-thumb {
-	opacity: 1;
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
 }
-
-input[type='range']:hover::-moz-range-thumb {
-	opacity: 1;
-}
-
-input[type='range']:hover::-ms-thumb {
-	opacity: 1;
-}
-
-input[type='range']::-webkit-slider-thumb {
-	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
-}
-input[type='range']::-moz-range-thumb {
-	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
-}
-input[type='range']::-ms-thumb {
-	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
-}
-
-
-
-
