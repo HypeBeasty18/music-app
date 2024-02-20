@@ -12,17 +12,17 @@ const SeekBar: FC<Props> = ({ value, duration, onInput }) => {
 
 	return (
 		<div className='flex flex-row items-center'>
-			<p className='text-white'>{value === 0 ? '0:00' : getTime(value)}</p>
+			<p className='text-white/70 text-sm'>{value === 0 ? '0:00' : getTime(value)}</p>
 			<input
 				type='range'
 				step='any'
 				value={value}
 				min={0}
-				max={duration}
+				max={duration }
 				onInput={onInput}
         className='l h-2 mx-4 rounded-lg w-[250px] cursor-pointer'
 			/>
-			<p className='text-white'>
+			<p className='text-white/70 text-sm'>
 				{duration === 0 ? '0:00' : getTime(duration)}
 			</p>
 		</div>
