@@ -3,6 +3,7 @@ import { Song } from 'types/type.data'
 
 const initialState = {
 	currentSongs: [],
+	currentArtists: [],
 	currentIndex: 0,
 	isPlaying: false,
 	activeSong: {},
@@ -22,13 +23,21 @@ const playerSlice = createSlice({
 		setCurrentSongs(state, action) {
 			state.currentSongs = action.payload
 			state.currentQueue = action.payload
+			state.currentIndex = 0
 		},
 		setCurrentIndex(state, action) {
 			state.currentIndex = action.payload
-			state.activeSong = state.currentQueue[state.currentIndex]			
+			if (state.currentSongs[action.payload].track) {
+				state.activeSong = state.currentQueue[state.currentIndex].track
+			} else {
+				state.activeSong = state.currentQueue[state.currentIndex]
+			}
 		},
 		setCurrentQueue(state, action) {
 			state.currentQueue = action.payload
+		},
+		setCurrentArtists(state, action) {
+			state.currentArtists = action.payload
 		}
 	}
 })
@@ -38,7 +47,8 @@ export const {
 	activeSong,
 	setCurrentSongs,
 	setCurrentIndex,
-	setCurrentQueue
+	setCurrentQueue,
+	setCurrentArtists
 } = playerSlice.actions
 
 export default playerSlice.reducer
