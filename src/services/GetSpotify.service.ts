@@ -11,20 +11,21 @@ export const GetSpotify = {
 		} catch (error) {
 			throw new Error()
 		}
+	},
+
+	async GetSong(data: string) {
+		try {
+			const res = await $axiosShazam.get('/search', {
+				params: {
+					term: data,
+					locale: 'en-US',
+					offset: '0',
+					limit: '5'
+				}
+			})
+			return res.data
+		} catch (error) {
+			throw new Error()
+		}
 	}
-
-	// async GetSong() {
-	// 	try {
-	// 		const res = await $axiosShazam.get('/tracks', {
-	// 			params: { ids: '4WNcduiCmDNfmTEz7JvmLv' }
-	// 		})
-	//     const track = res.data.tracks[0];
-	//     const trackUrl = track.external_urls.spotify;
-	//     console.log(track);
-
-	// 		return trackUrl
-	// 	} catch (error) {
-	// 		throw new Error()
-	// 	}
-	// }
 }
