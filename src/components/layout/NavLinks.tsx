@@ -17,16 +17,6 @@ const links = [
 		name: 'Around you',
 		icon: HiOutlinePhotograph,
 		path: '/around-you'
-	},
-	{
-		name: 'Top Artists',
-		icon: HiOutlineUserGroup,
-		path: '/top-artists'
-	},
-	{
-		name: 'Top Charts',
-		icon: HiOutlineHashtag,
-		path: '/top-charts'
 	}
 ]
 

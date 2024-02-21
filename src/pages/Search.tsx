@@ -31,7 +31,7 @@ const Search = (props: Props) => {
 			) : (
 				<div>
 					{error ? (
-						<span>{error}</span>
+						<span>{error.message}</span>
 					) : (
 						<div>
 							<p className='text-white text-[40px] font-medium animate-slideup'>

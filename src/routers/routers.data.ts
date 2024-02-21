@@ -1,11 +1,8 @@
-import AroundYou from "pages/AroundYou";
-import Artist from "pages/Artist";
-import Discover from "pages/Discover";
-import Search from "pages/Search";
-import Song from "pages/Song";
-import TopArtists from "pages/TopArtists";
-import TopCharts from "pages/TopCharts";
-
+import AroundYou from 'pages/AroundYou'
+import Artist from 'pages/Artist'
+import Discover from 'pages/Discover'
+import Search from 'pages/Search'
+import Song from 'pages/Song'
 
 export const routers = [
 	{
@@ -17,16 +14,6 @@ export const routers = [
 		name: 'around-you',
 		path: '/around-you',
 		component: AroundYou
-	},
-	{
-		name: 'top-artists',
-		path: '/top-artists',
-		component: TopArtists
-	},
-	{
-		name: 'top-charts',
-		path: '/top-charts',
-		component: TopCharts
 	},
 	{
 		name: 'artist',

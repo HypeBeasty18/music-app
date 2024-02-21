@@ -21,7 +21,6 @@ const Discover: FC = () => {
 
 	useEffect(() => {
 		if (inView && value < 200) {
-			console.log('fire')
 			mutate(value)
 		}
 	}, [inView])
@@ -30,7 +29,10 @@ const Discover: FC = () => {
 		<>
 			{value > 19 ? (
 				<div>
-					<p className='text-grey text-[24px] font-light mt-10 mb-5 animate-slideleft'>
+					<h2 className='title'>
+						Discover
+					</h2>
+					<p className='text-grey text-[24px] font-light mb-5 animate-slideleft'>
 						Top songs
 					</p>
 					<div className='flex flex-wrap  gap-8'>
