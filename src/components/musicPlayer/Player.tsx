@@ -46,10 +46,11 @@ const Player: FC<Props> = ({
 		}
 	}, [seekTime])
 
+	
 	return (
 		<audio
 			ref={audioRef}
-			src={activeSong.hub.actions[1].uri}
+			src={activeSong.hub.actions && activeSong.hub.actions[1].uri}
 			loop={repeat}
 			onEnded={onEnded}
 			onTimeUpdate={onTimeUpdate}
