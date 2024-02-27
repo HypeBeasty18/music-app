@@ -20,5 +20,13 @@ export default defineConfig({
 			types: '/src/types',
 			helpers: '/src/helpers'
 		}
+	},
+	server: {
+		watch: {
+			usePolling: true
+		}, 
+		host: true,
+		strictPort: true,
+		port: 5174
 	}
 })
